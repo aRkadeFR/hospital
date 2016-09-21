@@ -38,7 +38,6 @@ KEYWORDS = [
 ]
 PACKAGES = [NAME.replace('-', '_')]
 REQUIREMENTS = [
-    'setuptools>=0.7',
     'requests',
     'six',
 ]
@@ -70,4 +69,5 @@ if __name__ == '__main__':  # Don't run setup() when we import this module.
           include_package_data=True,
           zip_safe=False,
           install_requires=REQUIREMENTS,
+          setup_requires=['setuptools'],
           entry_points=ENTRY_POINTS)

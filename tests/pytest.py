@@ -35,8 +35,7 @@ class PyTestPluginTestCase(unittest.TestCase):
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
-        exit_code = process.wait()
-        self.assertEqual(exit_code, 0)
+        process.wait()
         stdout = str(process.stdout.read())
         self.assertIn('collected 2 items', stdout)
         self.assertIn('===== 2 deselected in ', stdout)
